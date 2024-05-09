@@ -221,4 +221,19 @@ public class App {
             System.out.println();
         }
     }
+
+
+    public static int removeDuplicates() {
+
+        int[] nums = { 0, 0, 1, 1, 1, 2, 3, 3, 4, 5, 5, 5, 5};
+        int i = 0;
+
+        for(int n = 1; n < nums.length; n++){
+            if(nums[i] != nums[n]){
+                nums[i + 1] = nums[n];
+                i++;
+            }
+        }
+        return i + 1;
+    }
 }
